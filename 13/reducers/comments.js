@@ -1,0 +1,32 @@
+import { ADD_COMMENT, REMOVE_COMMENT } from '../actions';
+
+function courseComments(state = [], action) {
+  switch(action.type){
+    case ADD_COMMENT:
+      return [
+        ...state,
+        { user: action.author, text: action.comment }
+      ];
+    case REMOVE_COMMENT:
+      return [
+        ...state.slice(0,action.i),
+        ...state.slice(action.i + 1)
+      ];
+    default:
+      return state;
+  }
+  return state;
+}
+
+function comments(state = [], action) {
+  console.log(state);
+  if(typeof action.courseId !== 'undefined') {
+    return {
+      ...state,
+      [action.courseId]: courseComments(state[action.courseId], action)
+    }
+  }
+  return state;
+}
+
+export default comments;
