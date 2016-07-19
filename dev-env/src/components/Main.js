@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Courses from './Courses';
+import Radium, {StyleRoot} from 'Radium';
 
 class Main extends Component {
   render() {
@@ -22,14 +23,14 @@ class Main extends Component {
       }
     };
     return (
-      <div style={styles.root}>
+      <StyleRoot style={styles.root}>
         <header style={styles.header}>
           <div style={styles.logo}>Haoqicat</div>
         </header>
         <Courses />
-      </div>
+      </StyleRoot>
     );
   }
 }
 
-export default Main;
+export default Radium(Main);
