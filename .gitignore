@@ -1,7 +1,3 @@
 .DS_Store
 node_modules
 npm-debug.log
-dev-env/src/components
-dev-env/src/actions
-dev-env/src/reducers
-dev-env/src/store.js
