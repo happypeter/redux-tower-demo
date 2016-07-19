@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Courses from './Courses';
 
 class Main extends Component {
   render() {
@@ -25,6 +26,7 @@ class Main extends Component {
         <header style={styles.header}>
           <div style={styles.logo}>Haoqicat</div>
         </header>
+        <Courses />
       </div>
     );
   }
