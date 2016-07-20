@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { Card } from 'material-ui/Card';
 import Radium from 'radium';
 
+import { Link } from 'react-router';
+
+
 class Course extends Component {
   getStyles() {
     return {
@@ -29,7 +32,9 @@ class Course extends Component {
       <div style={styles.root}>
         <Card>
           <div style={styles.imgWrap}>
-            <img src={course.image} alt={course.name} style={styles.img} />
+            <Link to={`/view/${course.id}`}>
+              <img src={course.image} alt={course.name} style={styles.img} />
+            </Link>
           </div>
         </Card>
       </div>
