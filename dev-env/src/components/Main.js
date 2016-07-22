@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
-import Radium, {StyleRoot} from 'radium';
+import { Link } from 'react-router';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-
+import Radium, { StyleRoot } from 'radium';
 
 class Main extends Component {
   getChildContext() {
-    return { muiTheme: getMuiTheme() };
+    return {
+      muiTheme: getMuiTheme()
+    };
   }
+
   render() {
     let styles = {
       root: {
@@ -24,18 +27,22 @@ class Main extends Component {
         letterSpacing: '-1px',
         lineHeight: '8.4rem',
         color: '#fff'
+      },
+      a: {
+        textDecoration: 'none'
       }
     };
     return (
       <StyleRoot style={styles.root}>
         <header style={styles.header}>
-          <div style={styles.logo}>Haoqicat</div>
+          <Link to='/' style={styles.a}><span style={styles.logo}>Haoqicat</span></Link>
         </header>
         { this.props.children }
       </StyleRoot>
     );
   }
 }
+
 Main.childContextTypes = {
   muiTheme: React.PropTypes.object.isRequired,
 };
