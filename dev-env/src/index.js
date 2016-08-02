@@ -13,12 +13,9 @@ import css from './styles/style.css';
 
 const router = (
   <Router history={browserHistory}>
-    <Route path="/" component={Main}>
-      <IndexRoute component={Courses}></IndexRoute>
-      <Route path="/view/:courseId" component={ShowCourse}></Route>
+    <w/:courseId" component={ShowCourse}></Route>
     </Route>
   </Router>
 )
 
 render(router, document.getElementById('root'));
-
