@@ -5,6 +5,8 @@ export const ADD_COMMENT = 'ADD_COMMENT';
 export const REMOVE_COMMENT = 'REMOVE_COMMENT';
 
 
+// action creators
+
 export function increment(index) {
   return { type: INCREMENT_LIKES, index }
 }
