@@ -5,7 +5,7 @@ import { browserHistory, Router, Route, IndexRoute } from 'react-router';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
 
-import Main from './components/Main';
+import App from './components/App';
 import Courses from './components/Courses';
 import ShowCourse from './components/ShowCourse';
 import { Provider } from 'react-redux';
@@ -16,7 +16,7 @@ import css from './styles/style.css';
 const router = (
   <Provider store={store}>
     <Router history={history}>
-      <Route path="/" component={Main}>
+      <Route path="/" component={App}>
         <IndexRoute component={Courses}></IndexRoute>
         <Route path="/view/:courseId" component={ShowCourse}></Route>
       </Route>
