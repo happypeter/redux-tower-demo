@@ -8,10 +8,11 @@ injectTapEventPlugin();
 import App from './components/App';
 import Courses from './components/Courses';
 import ShowCourse from './components/ShowCourse';
-import { Provider } from 'react-redux';
-import store, { history } from './store';
 
 import css from './styles/style.css';
+
+import { Provider } from 'react-redux';
+import store, { history } from './store';
 
 const router = (
   <Provider store={store}>
@@ -25,3 +26,4 @@ const router = (
 )
 
 render(router, document.getElementById('root'));
+

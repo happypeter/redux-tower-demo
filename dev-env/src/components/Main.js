@@ -37,7 +37,7 @@ class Main extends Component {
         <header style={styles.header}>
           <Link to='/' style={styles.a}><span style={styles.logo}>Haoqicat</span></Link>
         </header>
-        { this.props.children }
+        { React.cloneElement(this.props.children, { ...this.props, key: undefined, ref: undefined }) }
       </StyleRoot>
     );
   }

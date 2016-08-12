@@ -1,7 +1,7 @@
 import React from 'react';
 import Radium from 'radium';
 
-import courses from '../data/courses';
+// import courses from '../data/courses';
 import Course from './Course';
 
 const Courses = React.createClass({
@@ -18,7 +18,7 @@ const Courses = React.createClass({
     };
     return (
       <div style={styles.root}>
-        { courses.map((course, i) => <Course key={i} course={course} />)}
+        { this.props.courses.map((course, i) => <Course key={i} course={course} />)}
       </div>
     )
   }
