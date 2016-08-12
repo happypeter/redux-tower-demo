@@ -18,7 +18,7 @@ const Courses = React.createClass({
     };
     return (
       <div style={styles.root}>
-        { this.props.courses.map((course, i) => <Course key={i} course={course} />)}
+        { this.props.courses.map((course, i) => <Course increment={this.props.increment} key={i} course={course} />)}
       </div>
     )
   }

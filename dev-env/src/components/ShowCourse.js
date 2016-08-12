@@ -29,7 +29,7 @@ class ShowCourse extends Component {
       <div>
         <div style={styles.top}>
           <div style={styles.container}>
-            <Course course={selectedCourse} />
+            <Course course={selectedCourse} increment={this.props.increment} />
           </div>
         </div>
       </div>
