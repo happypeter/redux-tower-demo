@@ -1,13 +1,11 @@
-import { ADD_COMMENT, REMOVE_COMMENT } from '../actions';
-
 function courseComments(state = [], action) {
   switch(action.type){
-    case ADD_COMMENT:
+    case 'ADD_COMMENT':
       return [
         ...state,
         { user: action.author, text: action.comment }
       ];
-    case REMOVE_COMMENT:
+    case 'REMOVE_COMMENT':
       return [
         ...state.slice(0,action.i),
         ...state.slice(action.i + 1)
@@ -15,7 +13,6 @@ function courseComments(state = [], action) {
     default:
       return state;
   }
-  return state;
 }
 
 function comments(state = [], action) {

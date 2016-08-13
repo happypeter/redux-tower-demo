@@ -68,8 +68,8 @@ class CommentBox extends Component {
   render() {
     let styles = this.getStyles();
     let commentList;
-    if(this.props.courseComments !== undefined) {
-      commentList = this.props.courseComments.map((comment, i) => {
+    if(this.props.comments !== undefined) {
+      commentList = this.props.comments.map((comment, i) => {
         return (
           <div key={i} style={styles.comment}>
             <div style={styles.user}>{comment.user}: </div>
