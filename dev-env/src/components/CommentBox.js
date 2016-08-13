@@ -54,12 +54,19 @@ class CommentBox extends Component {
       }
     }
   }
-
+  handleSubmit(e) {
+    e.preventDefault();
+    const courseId = this.props.params.courseId;
+    const author = this.refs.author.getValue();
+    const comment = this.refs.comment.getValue();
+    this.props.addComment(courseId, author, comment);
+    this.refs.commentForm.reset();
+  }
   render() {
     let styles = this.getStyles();
     let commentList;
-    if(this.props.comments !== undefined) {
-      commentList = this.props.comments.map((comment, i) => {
+    if(this.props.courseComments !== undefined) {
+      commentList = this.props.courseComments.map((comment, i) => {
         return (
           <div key={i} style={styles.comment}>
             <div style={styles.user}>{comment.user}: </div>
@@ -73,7 +80,7 @@ class CommentBox extends Component {
       <div style={styles.root}>
         <Card style={styles.container}>
           { commentList }
-          <form ref="commentForm" style={styles.form}>
+          <form ref="commentForm" style={styles.form} onSubmit={this.handleSubmit.bind(this)}>
             <TextField
               ref='author'
               style={styles.textField}

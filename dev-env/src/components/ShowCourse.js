@@ -34,7 +34,7 @@ class ShowCourse extends Component {
             <Course course={selectedCourse} increment={this.props.increment} comments={comments} />
           </div>
         </div>
-        <CommentBox comments={comments} />
+        <CommentBox courseComments={comments} {...this.props} />
       </div>
     );
   }
