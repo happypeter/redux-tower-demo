@@ -71,7 +71,7 @@ class CommentBox extends Component {
           <div key={i} style={styles.comment}>
             <div style={styles.user}>{comment.user}: </div>
             <div style={styles.content}>{comment.text}</div>
-            <ActionHighlightOff color='red' style={styles.icon} />
+            <ActionHighlightOff color='red' style={styles.icon} onClick={this.props.removeComment.bind(null, this.props.params.courseId, i)}/>
           </div>
         )
       });
