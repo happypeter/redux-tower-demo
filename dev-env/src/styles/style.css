@@ -1,5 +1,5 @@
 .likes-heart {
-  background: url(http://f.cl.ly/items/3Y373q2Q3J3Y1j203n0m/Bitmap-3.png) center no-repeat;
+  background: url(http://o86bpj665.bkt.clouddn.com/redux-tower/heart.png) center no-repeat;
   background-size: contain;
   font-size: 2rem;
   padding: 1rem;
@@ -24,8 +24,5 @@
 }
 .likes-heart.like-enter.like-enter-active {
   transform: translateX(-50%) translateY(-50%) scale(5);
-}
-.likes-heart .like-leave-active {
-  display: none;
 }
 

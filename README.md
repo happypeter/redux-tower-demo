@@ -18,22 +18,26 @@ dev-env: 项目运行环境
 
 08: redux 与 react 组件结合
 
+09: React Devtools 演示 Redux 数据流
+
 10: 获取 store 中的 courses 状态值
 
 11: 更新 store 中的 courses 状态值
 
-12: 展示评论组件
+12: 获取 store 中的 comments 状态值
 
 13: 更新 store 中的 comments 状态值
 
 14: 模块热加载对 reducer 文件生效
 
+15: Redux Devtools 的妙用
+
 只要把除了 dev-env 目录之外，其它目录的代码拷贝到 `dev-env/src` 目录中，在 `dev-env` 目录下运行项目，就能查看该目录实现的功能了。
 
-目录 14 中存储的是完整的项目代码，执行如下命令：
+目录 15 中存储的是完整的项目代码，执行如下命令：
 
 ```
-cp -rf 14 dev-env/src
+cp -rf 15 dev-env/src
 cd dev-env
 npm install
 npm start
